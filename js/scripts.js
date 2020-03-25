@@ -10,7 +10,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  setTimeout(showSlides, 8000); // Change image every 5 seconds
 }
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam03MjE0IiwiYSI6ImNrNnNwdjFmYTBodTczbXF4bnJzaGR1Z2oifQ.Jl92KHVxrXt33RDS85IXAg';
@@ -135,7 +135,7 @@ var StyleLookup = (code) => {
 
 // set the default text for the feature-info div
 var defaultText = '<p>Move the mouse over the map to get more info on a property</p>'
-$('#feature-info').html(defaultText)
+$('.feature-info').html(defaultText)
 
 //create an object to hold the initialization options for a mapboxGL map
 var initOptions ={
@@ -339,11 +339,10 @@ map.on('mousemove', function (e) {
       <h4>${hoveredFeature.properties.build_nme}</h4>
       <p><strong>Building Type:</strong> ${hoveredFeature.properties.build_type}</p>
       <p><strong>Architecture Style:</strong> ${hoveredFeature.properties.style_prim}</p>
-      <p><strong>Year Built:</strong> ${hoveredFeature.properties.year_built}</p>
       <p><strong>Primary Building Material:</strong> ${hoveredFeature.properties.mat_prim}</p>
       <p><strong>Original Use:</strong> ${hoveredFeature.properties.use_orig}</p>
     `
-    $('#feature-info').html(featureInfo)
+    $('.feature-info').html(featureInfo)
 
     // set this lot's polygon feature as the data for the highlight source
     map.getSource('highlight-feature').setData(hoveredFeature.geometry);
