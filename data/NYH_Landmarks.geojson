@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "NYH_Landmark_Geo",
+"name": "NYH_Landmarks",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "address": "1 GOVERNORS ISLAND", "build_nme": "Fort Jay Nurses' Quarters", "build_type": "Nurses Residence", "mat_prim": "Brick", "style_prim": "neo-Georgian", "use_orig": "Military, medical, housing", "year_built": 1900.0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -74.018264645178135, 40.692836988695454 ], [ -74.01839564117445, 40.692835435158052 ], [ -74.018401160162981, 40.69310505234386 ], [ -74.018383198481672, 40.693105265934385 ], [ -74.018376121233771, 40.693105349911818 ], [ -74.018317997174847, 40.693106039065334 ], [ -74.018270163637069, 40.693106605887472 ], [ -74.018269886622207, 40.693093029799016 ], [ -74.018264645178135, 40.692836988695454 ] ] ] ] } },

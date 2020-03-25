@@ -154,9 +154,9 @@ map.addControl(new mapboxgl.NavigationControl());
 map.on('style.load', function() {
 
 // add a geojson source to the map using our external geojson file
-map.addSource('NYH_Landmark_Geo', {
+map.addSource('NYH_Landmarks', {
   type: 'geojson',
-  data: './data/NYH_Landmark_Geo.geojson',
+  data: './data/NYH_Landmarks.geojson',
 });
 
 // let's make sure the source got added by logging the current map state to the console
@@ -165,9 +165,9 @@ map.addSource('NYH_Landmark_Geo', {
 
 // add a layer for our custom source
 map.addLayer({
-  id: 'fill-NYH_Landmark_Geo',
+  id: 'fill-NYH_Landmarks',
   type: 'fill',
-  source: 'NYH_Landmark_Geo',
+  source: 'NYH_Landmarks',
   paint: {
       'fill-color': {
         type: 'categorical',
@@ -327,7 +327,7 @@ map.on('mousemove', function (e) {
 
   // query for the features under the mouse, but only in the lots layer
   var features = map.queryRenderedFeatures(e.point, {
-      layers: ['fill-NYH_Landmark_Geo'],
+      layers: ['fill-NYH_Landmarks'],
   });
   // if the mouse pointer is over a feature on our layer of interest
   // take the data for that feature and display it in the sidebar
