@@ -27,9 +27,7 @@ var initOptions ={
     style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
     center: initialCenterPoint, // starting position [lng, lat]
     zoom: initialZoom, // starting zoom
-}
-
-
+};
 
 // a helper function for looking up colors and descriptions for NYC land use codes
 var StyleLookup = (code) => {
@@ -266,7 +264,7 @@ map.addLayer({
   paint: {
     'line-width': 2,
     'line-opacity': 0.9,
-    'line-color': 'white',
+    'line-color': 'red',
   }
 });
 
@@ -291,7 +289,7 @@ map.addLayer(
 'source-layer': 'building',
 'filter': ['==', 'extrude', 'true'],
 'type': 'fill-extrusion',
-'minzoom': 15,
+'minzoom': 10,
 'paint': {
 'fill-extrusion-color': '#aaa',
 
@@ -356,6 +354,7 @@ map.on('mousemove', function (e) {
       features: []
     });
 
+
 // reset the default message
     $('#feature-info').html(defaultText)
   }
@@ -391,3 +390,5 @@ $('#Governors-Island').on('click', function() {
         zoom: initialZoom
       })
 })
+
+  map.scrollZoom.disable();
