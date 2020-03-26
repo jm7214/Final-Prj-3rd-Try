@@ -1,102 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<title>NY Harbor Landmarks</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href='css/styles.css' rel='stylesheet' />
+  <meta charset="utf-8" />
+  <title>NY Harbor Landmarks</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='css/styles.css' rel='stylesheet' />
 
 </head>
 
 <body>
   <!-- Add font awesome icons -->
   <div class='social'>
-  <a href="https://www.facebook.com/nyharborparks" class="fa fa-facebook"></a>
-  <a href="https://www.twitter.com/NYHarborParks" class="fa fa-twitter"></a>
+    <a href="https://www.facebook.com/nyharborparks" class="fa fa-facebook"></a>
+    <a href="https://www.twitter.com/NYHarborParks" class="fa fa-twitter"></a>
   </div>
-<!-- Header container -->
+  <!-- Header container -->
   <div id="header-container">
     <div class="header-title">
       <h1>NY Harbor Landmarks</h1>
       <p> Take a journey through the historic harbor</p>
       <button class="button"><a href="#container-2" style="text-decoration:none">View Map</a></button>
+    </div>
+  </div>
+  <!-- Slideshow and sidebar container -->
+  <div id='container-1'>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://cdn.vox-cdn.com/thumbor/kiu5QTzYqb78adx9Rd2ELhLv5PY=/0x0:2000x1333/1200x800/filters:focal(840x507:1160x827)/cdn.vox-cdn.com/uploads/chorus_image/image/65409461/181229_09_08_44_5DSR1559.0.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.silverkris.com/wp-content/uploads/2018/03/statue-of-liberty-1392273_19201.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://imgs.6sqft.com/wp-content/uploads/2017/05/30130515/Ellis-Island.jpg" style="width:100%">
       </div>
     </div>
-<!-- Slideshow and sidebar container -->
-<div id='container-1'>
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
+    <!-- Harbor Islands Info -->
+    <div class='right-sidebar'>
+      <h3>Harbor Islands</h3>
+      <hr />
+      <p>New York Harbor is home to three small islands; Governors Island, Ellis Island and Liberty Island.
+        Here you will find several prominent landmarks that provide a sneak peak into old New York's rich history.
+        <br />
+        <br />
+        <br />
+        Each island is unique. Governors Island is a 172 acre island and former military base located between Manhattan and Brooklyn.
+        On Liberty Island you will find the world-famous symbol of freedom and democracy known as the Statue of Liberty. Ellis Island,
+        a former immigrant inspection station, contains the facilities inhabited by the former headquarters of the U.S. Bureau of Immigration for
+        New York Harbor.
+      </p>
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="https://cdn.vox-cdn.com/thumbor/kiu5QTzYqb78adx9Rd2ELhLv5PY=/0x0:2000x1333/1200x800/filters:focal(840x507:1160x827)/cdn.vox-cdn.com/uploads/chorus_image/image/65409461/181229_09_08_44_5DSR1559.0.jpg" style="width:100%">
     </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="https://www.silverkris.com/wp-content/uploads/2018/03/statue-of-liberty-1392273_19201.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="https://imgs.6sqft.com/wp-content/uploads/2017/05/30130515/Ellis-Island.jpg" style="width:100%">
-    </div>
-    </div>
-<div class='right-sidebar'>
-    <h3>Harbor Islands</h3>
-    <hr/>
-    <p>New York Harbor is home to three small islands; Governors Island, Ellis Island and Liberty Island.
-    Here you will find several prominent landmarks that provide a sneak peak into old New York's rich history.
-    <br/>
-    <br/>
-    <br/>
-    Each island is unique. The world-famous symbol of freedom and democracy can be found on Liberty Island, A former U.S. Army military
-    base and U.S. Coast Guard station, Governors Island is the oldest European settlement in New York.
-  </p>
-
-</div>
-</div>
-
-<!--Sidebar Info and Map -->
-<div id='container-2'>
-
-  <div class='sidebar'>
-      <h3>Landmarks in New York Harbor</h3>
-        <p></p>
-        <hr/>
-  <div class='feature-info'></div>
-
-<br/>
-<br/>
-<br/>
-  <p>Click the buttons below to fly to the island.</p>
-      <br/>
-      <!-- Buttons for flying the map -->
-      <button class='flyto-button' id="Governors-Island">Governors Island</button>
-      <br/>
-
-      <button class='flyto-button' id="Ellis-Island">Ellis Island</button>
-      <br/>
-
-      <button class='flyto-button' id="Liberty-Island">Liberty Island</button>
-      <br/>
-
-      <button class='flyto-button' id="Initial">Full View</button>
   </div>
 
-  <div id="govisland-map"></div>
+  <!--Sidebar Info and Map -->
+  <div id='container-2'>
+
+    <div class='sidebar'>
+      <h3>Landmarks in New York Harbor</h3>
+      <p>This map highlights all of the designated landmarks on each island. The landmarks are categorized by architecture style,
+        with additonal information provided in the panel below.</p>
+      <hr />
+      <div class='feature-info'></div>
+
+      <br />
+      <br />
+      <br />
+      <p>Click the buttons below to fly to the island.</p>
+      <br />
+      <!-- Buttons for flying the map -->
+      <button class='flyto-button' id="Governors-Island">Governors Island</button>
+      <br />
+
+      <button class='flyto-button' id="Ellis-Island">Ellis Island</button>
+      <br />
+
+      <button class='flyto-button' id="Liberty-Island">Liberty Island</button>
+      <br />
+
+      <button class='flyto-button' id="Initial">Full View</button>
+    </div>
+
+    <div id="govisland-map"></div>
   </div>
 
   <!-- Load mapboxGL, jQuery, then our local javascript files -->
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src='js/scripts.js'></script>
 
 </body>
+
 </html>
