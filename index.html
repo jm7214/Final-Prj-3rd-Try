@@ -5,17 +5,27 @@
 <title>NY Harbor Landmarks</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='css/styles.css' rel='stylesheet' />
 
 </head>
 
 <body>
-
+  <!-- Add font awesome icons -->
+  <div class='social'>
+  <a href="https://www.facebook.com/nyharborparks" class="fa fa-facebook"></a>
+  <a href="https://www.twitter.com/NYHarborParks" class="fa fa-twitter"></a>
+  </div>
+<!-- Header container -->
   <div id="header-container">
     <div class="header-title">
       <h1>NY Harbor Landmarks</h1>
+      <p> Take a journey through the historic harbor</p>
+      <button class="button"><a href="#container-2" style="text-decoration:none">View Map</a></button>
       </div>
     </div>
+<!-- Slideshow and sidebar container -->
+<div id='container-1'>
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
@@ -35,23 +45,23 @@
       <img src="https://imgs.6sqft.com/wp-content/uploads/2017/05/30130515/Ellis-Island.jpg" style="width:100%">
     </div>
     </div>
+<div class='right-sidebar'>
+    <h3>Harbor Islands</h3>
+    <hr/>
+    <p>New York Harbor is home to three small islands; Governors Island, Ellis Island and Liberty Island.
+    Here you will find several prominent landmarks that provide a sneak peak into old New York's rich history.
+    <br/>
+    <br/>
+    <br/>
+    Each island is unique. The world-famous symbol of freedom and democracy can be found on Liberty Island, A former U.S. Army military
+    base and U.S. Coast Guard station, Governors Island is the oldest European settlement in New York.
+  </p>
 
-  <!-- Next and previous buttons
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-
-  <!-- The dots/circles
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div> -->
-<div class='right-sidebar-container'></div>
+</div>
+</div>
 
 <!--Sidebar Info and Map -->
-<div id='container'>
+<div id='container-2'>
 
   <div class='sidebar'>
       <h3>Landmarks in New York Harbor</h3>
