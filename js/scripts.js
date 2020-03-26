@@ -134,7 +134,7 @@ var StyleLookup = (code) => {
 
 
 // set the default text for the feature-info div
-var defaultText = '<p>Move the mouse over the map to get more info on a property</p>'
+var defaultText = '<p>Move the mouse over the map to get more info about each property</p>'
 $('.feature-info').html(defaultText)
 
 //create an object to hold the initialization options for a mapboxGL map
@@ -356,8 +356,38 @@ map.on('mousemove', function (e) {
       features: []
     });
 
-    // reset the default message
+// reset the default message
     $('#feature-info').html(defaultText)
   }
-})
+    })
+  })
+
+$('#Governors-Island').on('click', function() {
+      map.flyTo({
+        center: [-74.017147,40.689862],
+        zoom: 16
+      })
+    })
+
+    $('#Ellis-Island').on('click', function() {
+
+      map.flyTo({
+        center: [-74.040710,40.698683],
+        zoom: 16.5
+      })
+    })
+
+    $('#Liberty-Island').on('click', function() {
+
+      map.flyTo({
+        center: [-74.045184,40.689653],
+        zoom: 17
+      })
+    })
+
+    $('#Initial').on('click', function() {
+      map.flyTo({
+        center: initialCenterPoint,
+        zoom: initialZoom
+      })
 })
