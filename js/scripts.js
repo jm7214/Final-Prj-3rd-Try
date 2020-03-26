@@ -164,10 +164,11 @@ map.on('style.load', function() {
 
 
   // add a layer for our custom source
+
   map.addLayer({
-    id: 'fill-NYH_Landmarks',
+    id:'fill-NYH_Landmarks',
     type: 'fill',
-    source: 'NYH_Landmarks',
+    source:'NYH_Landmarks',
     paint: {
       'fill-color': {
         type: 'categorical',
@@ -248,7 +249,8 @@ map.on('style.load', function() {
         ]
       }
     }
-  })
+  }, 'waterway-label')
+
 
   // add an empty data source, which we will use to highlight the lot the user is hovering over
   map.addSource('highlight-feature', {
